@@ -1,6 +1,5 @@
-import ReCAPTCHA from "react-google-recaptcha";
-import { useRef } from "react";
 import { useState, useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
   Container,
   CardWrapper,
@@ -20,6 +19,9 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const recaptchaRef = useRef<ReCAPTCHA | null>(null);
+
+  const [captchaValid, setCaptchaValid] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false); // If you want to trigger this later
 
   const handleCaptchaChange = (value: string | null) => {
     setCaptchaValid(!!value);
@@ -46,6 +48,8 @@ const Contact = () => {
                 if (!captchaValid) {
                   e.preventDefault();
                   alert("Please complete the reCAPTCHA.");
+                } else {
+                  setFormSuccess(true); // Optional: only if you want success message to show
                 }
               }}
             >
@@ -62,7 +66,6 @@ const Contact = () => {
                 <Label>Your Message</Label>
               </InputGroup>
 
-              {/* ✅ reCAPTCHA field */}
               <ReCAPTCHA
                 ref={recaptchaRef}
                 sitekey="YOUR_RECAPTCHA_SITE_KEY"
