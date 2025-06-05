@@ -13,7 +13,6 @@ import {
 } from "./styles";
 import { motion } from "framer-motion";
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 1) => ({
@@ -30,17 +29,17 @@ const fadeInUp = {
 const About = () => {
   const cards = [
     {
-      icon: designIcon,
+      icon: "/aboutCard1.jpeg", // ✅ Public path
       title: "Creative Design",
       text: "Visual storytelling through stunning UI/UX.",
     },
     {
-      icon: codeIcon,
+      icon: "/aboutCard2.jpeg", // ✅ Public path
       title: "Clean Code",
       text: "Frontend and backend solutions that scale.",
     },
     {
-      icon: "/aboutCard3.mp4", // ✅ Public path to video
+      icon: "/aboutCard3.mp4", // ✅ Public video path
       title: "Motion Magic",
       text: "Seamless looping videos for immersive section design.",
     },
