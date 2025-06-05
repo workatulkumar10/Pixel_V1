@@ -39,7 +39,7 @@ const About = () => {
       text: "Frontend and backend solutions that scale.",
     },
     {
-      icon: "/aboutCard3.mp4", // ✅ Public video path
+      icon: "/aboutcard3.mp4", // ✅ Public video path
       title: "Motion Magic",
       text: "Seamless looping videos for immersive section design.",
     },
