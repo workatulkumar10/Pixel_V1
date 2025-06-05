@@ -68,7 +68,7 @@ const Contact = () => {
 
               <ReCAPTCHA
                 ref={recaptchaRef}
-                sitekey="6Le2WlYrAAAAAJQ25sB1Ygov255qBj13WnX3TUKT"
+                sitekey="6LeLXVYrAAAAANEV0Srv5xm4q4zxsJ4O1OVYqlmG"
                 onChange={handleCaptchaChange}
               />
 
