@@ -13,10 +13,6 @@ import {
 } from "./styles";
 import { motion } from "framer-motion";
 
-// Card image assets
-import designIcon from "../../aboutCard1.jpeg";
-import codeIcon from "../../aboutCard2.jpeg";
-// ✅ Video assets are now loaded from the public folder (no imports)
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
