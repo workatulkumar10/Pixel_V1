@@ -12,12 +12,12 @@ import {
   CardText,
 } from "./styles";
 import { motion } from "framer-motion";
-import bgVideo from "../../assets/about2.mp4";
+import bgVideo from "../../about2.mp4";
 
 // Card media assets
-import designIcon from "../../assets/aboutCard1.jpeg";
-import codeIcon from "../../assets/aboutCard2.jpeg";
-import motionIcon from "../../assets/aboutCard3.mp4";
+import designIcon from "../../aboutCard1.jpeg";
+import codeIcon from "../../aboutCard2.jpeg";
+// ✅ Removed motionIcon import – now using public path
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -45,7 +45,7 @@ const About = () => {
       text: "Frontend and backend solutions that scale.",
     },
     {
-      icon: motionIcon,
+      icon: "/aboutCard3.mp4", // ✅ Using public video path
       title: "Motion Magic",
       text: "Seamless looping videos for immersive section design.",
     },
@@ -121,7 +121,7 @@ const About = () => {
               viewport={{ once: true }}
             >
               <CardImage>
-                {card.icon.endsWith(".mp4") ? (
+                {typeof card.icon === "string" && card.icon.endsWith(".mp4") ? (
                   <video src={card.icon} autoPlay muted loop playsInline />
                 ) : (
                   <img src={card.icon} alt={card.title} />
