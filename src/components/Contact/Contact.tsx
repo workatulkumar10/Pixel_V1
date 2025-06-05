@@ -57,10 +57,12 @@ const Contact = () => {
                 <Input type="text" name="name" placeholder="Your Name" required />
                 <Label>Your Name</Label>
               </InputGroup>
+
               <InputGroup>
                 <Input type="email" name="email" placeholder="Your Email" required />
                 <Label>Your Email</Label>
               </InputGroup>
+
               <InputGroup>
                 <Textarea name="message" placeholder="Your Message" required />
                 <Label>Your Message</Label>

@@ -116,6 +116,13 @@ export const Textarea = styled.textarea`
   &::placeholder {
     color: transparent;
   }
+
+  &:focus + label,
+  &:not(:placeholder-shown) + label {
+    top: 0.4rem;
+    font-size: 0.75rem;
+    color: #a855f7;
+  }
 `;
 
 export const Button = styled.button`
