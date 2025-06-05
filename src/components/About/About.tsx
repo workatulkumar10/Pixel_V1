@@ -12,12 +12,11 @@ import {
   CardText,
 } from "./styles";
 import { motion } from "framer-motion";
-import bgVideo from "../../about2.mp4";
 
-// Card media assets
+// Card image assets
 import designIcon from "../../aboutCard1.jpeg";
 import codeIcon from "../../aboutCard2.jpeg";
-// ✅ Removed motionIcon import – now using public path
+// ✅ Video assets are now loaded from the public folder (no imports)
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -45,7 +44,7 @@ const About = () => {
       text: "Frontend and backend solutions that scale.",
     },
     {
-      icon: "/aboutCard3.mp4", // ✅ Using public video path
+      icon: "/aboutCard3.mp4", // ✅ Public path to video
       title: "Motion Magic",
       text: "Seamless looping videos for immersive section design.",
     },
@@ -54,7 +53,7 @@ const About = () => {
   return (
     <Container id="about">
       <VideoBackground autoPlay muted loop playsInline>
-        <source src={bgVideo} type="video/mp4" />
+        <source src="/about2.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </VideoBackground>
       <Overlay />
